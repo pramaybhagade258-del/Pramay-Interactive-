@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranay Interaction | Latest Updates & Socials</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use a dark theme and Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#111827', // Dark Slate
+                        'secondary-bg': '#1F2937', // Slightly lighter slate
+                        'accent': '#EC4899', // Pink/Magenta
+                        'text-light': '#F3F4F6',
+                        'text-muted': '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(236, 72, 153, 0.5)',
+                        'sm-glow': '0 0 8px rgba(236, 72, 153, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better visual integration with the dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280;
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-text-light font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header & Navigation (Simplified) -->
+    <header class="sticky top-0 z-50 bg-secondary-bg/95 backdrop-blur-sm shadow-lg border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Studio Name - Now acts as a Home Button -->
+                <div class="flex-shrink-0">
+                    <button onclick="showHomePage()" class="text-2xl font-extrabold tracking-tight text-accent transition-colors duration-300 hover:text-white focus:outline-none">
+                        Pranay Interaction
+                    </button>
+                </div>
+                <!-- Navigation - Only Contact Link -->
+                <nav>
+                    <a href="#contact" class="text-text-muted hover:text-accent font-medium transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Containers -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- 1. HOMEPAGE CONTENT (Visible by default) -->
+        <div id="homepage-content">
+            <!-- Hero Section - LATEST NEWS AT THE TOP -->
+            <section class="mb-16">
+                <div class="bg-secondary-bg p-6 md:p-12 rounded-xl shadow-2xl border border-gray-700 transition-transform duration-500 hover:scale-[1.01] hover:shadow-glow">
+                    <p class="text-sm font-semibold uppercase text-accent mb-2">LATEST ANNOUNCEMENT</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                        <span class="text-white">"Indian Open World"</span> Sandbox Update is Live!
+                    </h1>
+                    <p class="text-lg text-text-muted mb-6 max-w-3xl">
+                        Explore the newly expanded city, test the dynamic day/night cycle, and drive the new lineup of vehicles. Click below for the full patch notes and feature breakdown.
+                    </p>
+                    <!-- Button now calls the JS function to switch the view to the Update Page -->
+                    <button onclick="showUpdatePage()" class="inline-block bg-accent text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl shadow-accent/40 transition-all duration-300 hover:bg-pink-400 transform hover:scale-105">
+                        Read Full Patch Notes
+                    </button>
+                </div>
+            </section>
+        </div>
+        <!-- END HOMEPAGE CONTENT -->
+
+
+        <!-- 2. GAME UPDATE PAGE CONTENT (Hidden by default) -->
+        <div id="update-page-content" class="hidden">
+            <button onclick="showHomePage()" class="text-accent hover:text-white font-semibold mb-6 flex items-center transition-colors">
+                <!-- Chevron left icon -->
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Back to Latest Announcement
+            </button>
+            <div class="bg-secondary-bg p-6 md:p-10 rounded-xl shadow-2xl border border-accent/50">
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">Indian Open World Sandbox: V1.5 City Expansion</h1>
+                <p class="text-lg text-text-muted mb-8 border-b border-gray-700 pb-4">Released: November 5, 2025</p>
+                
+                <!-- NOTE: Screenshot section removed as per user request -->
+
+                <!-- Update Details -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-accent mb-4">Core Update Features</h2>
+                    <div class="space-y-6 text-text-muted">
+                        <div class="p-4 bg-gray-700/30 rounded-lg border-l-4 border-accent">
+                            <h3 class="text-xl font-semibold text-white mb-1">Dynamic Day/Night Cycle</h3>
+                            <p>Implemented a fully seamless day/night cycle that dynamically affects city traffic, NPC behavior, and ambient lighting, creating a truly immersive world.</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/30 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-xl font-semibold text-white mb-1">New Vehicle Lineup</h3>
+                            <p>Over a dozen new cars, bikes, and utility vehicles have been added to the game world. Find them scattered across the map and experience improved driving physics.</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/30 rounded-lg border-l-4 border-blue-500">
+                            <h3 class="text-xl font-semibold text-white mb-1">Expanded Open World Map</h3>
+                            <p>The eastern sector of the city map has been opened, featuring new residential blocks, a coastal highway, and several secret areas to explore.</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/30 rounded-lg border-l-4 border-yellow-500">
+                            <h3 class="text-xl font-semibold text-white mb-1">Optimization and Fixes</h3>
+                            <p>Major performance improvements across all platforms, reducing load times and frame drops. Addressed several stability issues reported by the community.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Buttons (Moved here after patch notes) -->
+                <div class="pt-6 border-t border-gray-700">
+                    <h2 class="text-2xl font-bold text-white mb-4 text-center">See the Update in Action!</h2>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+                        
+                        <!-- YouTube Button -->
+                        <a href="https://youtube.com/@pramaybhagade24?si=p88HR6ca_QauPe8s" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center justify-center bg-red-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl shadow-red-600/40 transition-all duration-300 hover:bg-red-500 transform hover:scale-[1.03]">
+                            <!-- YouTube Icon -->
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.5l5.5-3.5L10 8.5v7zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            Watch Trailer on YouTube
+                        </a>
+
+                        <!-- Instagram Button -->
+                        <a href="https://www.instagram.com/pramaybhagade?igsh=MWEwNzYyc3l4eWZtOQ==" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center justify-center bg-purple-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl shadow-purple-600/40 transition-all duration-300 hover:bg-purple-500 transform hover:scale-[1.03]">
+                            <!-- Instagram Icon -->
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2.7l-.1.1v8.8l.1.1h8.8l.1-.1V4.9l-.1-.1H7.6zm9.2 1.3a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                            Follow on Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Final Action -->
+                <div class="text-center pt-8">
+                    <button onclick="showHomePage()" class="inline-block text-accent hover:text-white font-bold transition-all duration-300">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            Return to Homepage
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- END UPDATE PAGE CONTENT -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-secondary-bg py-8 border-t border-gray-700 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-2xl font-bold text-accent mb-4">Pranay Interaction</h4>
+            <p class="text-text-muted mb-6">Stay connected for the latest developments.</p>
+            
+            <!-- Social Links & Contact -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://youtube.com/@pramaybhagade24?si=p88HR6ca_QauPe8s" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-red-600 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.5l5.5-3.5L10 8.5v7zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/pramaybhagade?igsh=MWEwNzYyc3l4eWZtOQ==" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-purple-500 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2.7l-.1.1v8.8l.1.1h8.8l.1-.1V4.9l-.1-.1H7.6zm9.2 1.3a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                </a>
+                <a href="mailto:info@pranayinteraction.com" class="text-text-muted hover:text-accent transition-colors flex items-center space-x-1">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500">
+                &copy; 2025 Pranay Interaction. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Page Switching -->
+    <script>
+        /**
+         * Switches the view from the homepage to the game update details page.
+         */
+        function showUpdatePage() {
+            // Hide the homepage content
+            const home = document.getElementById('homepage-content');
+            home.classList.add('hidden');
+
+            // Show the update page content
+            const update = document.getElementById('update-page-content');
+            update.classList.remove('hidden');
+
+            // Scroll to the top of the new page smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /**
+         * Switches the view from the game update details page back to the homepage.
+         */
+        function showHomePage() {
+            // Hide the update page content
+            const update = document.getElementById('update-page-content');
+            update.classList.add('hidden');
+
+            // Show the homepage content
+            const home = document.getElementById('homepage-content');
+            home.classList.remove('hidden');
+
+            // Scroll to the top of the new page smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
